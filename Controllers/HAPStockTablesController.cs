@@ -138,7 +138,7 @@ namespace HTMLAPScraper.Controllers
         [Authorize]
         public ActionResult DeleteTable()
         {
-            string deleteQuery = "DELETE FROM HAPStockTables;" + "DBCC CHECKIDENT (HAPStockTables, RESEED, 0);";
+            string deleteQuery = "DELETE FROM dbo.HAPStockTable;" + "DBCC CHECKIDENT (HAPStockTable, RESEED, 0);";
 
             db.Database.ExecuteSqlCommand(deleteQuery);
 
