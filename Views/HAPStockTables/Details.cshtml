@@ -1,0 +1,66 @@
+﻿@model HTMLAPScraper.Models.HAPStockTable
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>HAPStockTable</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Time_Scraped)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Time_Scraped)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Stock_Symbol)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Stock_Symbol)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Last_Price)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Last_Price)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Change)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Change)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Change_Percent)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Change_Percent)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
